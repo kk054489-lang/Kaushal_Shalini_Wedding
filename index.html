@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaushal &amp; Shalini — Wedding Invitation</title>
+
+  <!-- Google Fonts: Cinzel Decorative, Great Vibes, Cormorant Garamond, Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Custom Royal Indian Heritage Theme -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royalMaroon: '#4A0A17',
+            crimson: '#6B0F22',
+            goldFoil: '#D4AF37',
+            goldLight: '#F6E2A1',
+            goldAntique: '#AA7C11',
+            silkIvory: '#FDF7EB',
+            parchment: '#F5E8D0',
+            emeraldRoyal: '#114B43',
+            marigold: '#D9822B',
+            inkDeep: '#2A1215',
+          },
+          fontFamily: {
+            display: ['"Cinzel Decorative"', 'Georgia', 'serif'],
+            script: ['"Great Vibes"', 'cursive'],
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Montserrat"', 'system-ui', 'sans-serif'],
+          },
+          letterSpacing: {
+            royal: '0.22em',
+            widecaps: '0.16em',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* Base setup */
+    body {
+      background-color: #4A0A17;
+      color: #2A1215;
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* =========================================================================
+       BANARASI SILK & PARCHMENT BROCADE TEXTURES
+       ========================================================================= */
+    .bg-royal-brocade {
+      background-color: #4A0A17;
+      background-image:
+        radial-gradient(circle at 50% 20%, rgba(107, 15, 34, 0.85) 0%, rgba(74, 10, 23, 0.96) 72%),
+        url("data:image/svg+xml,%3Csvg width='72' height='72' viewBox='0 0 72 72' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-opacity='0.09' stroke-width='0.9'%3E%3Cpath d='M36 6 L46 26 L66 36 L46 46 L36 66 L26 46 L6 36 L26 26 Z'/%3E%3Ccircle cx='36' cy='36' r='6'/%3E%3Ccircle cx='0' cy='0' r='5'/%3E%3Ccircle cx='72' cy='0' r='5'/%3E%3Ccircle cx='0' cy='72' r='5'/%3E%3Ccircle cx='72' cy='72' r='5'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .bg-ivory-parchment {
+      background-color: #FDF7EB;
+      background-image:
+        radial-gradient(circle at 50% 0%, rgba(253, 247, 235, 0.92) 0%, rgba(245, 232, 208, 0.96) 100%),
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23AA7C11' stroke-opacity='0.08' stroke-width='0.8'%3E%3Cpath d='M30 8 C35 18, 42 25, 52 30 C42 35, 35 42, 30 52 C25 42, 18 35, 8 30 C18 25, 25 18, 30 8 Z'/%3E%3Ccircle cx='30' cy='30' r='2.5'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    /* =========================================================================
+       METALLIC GOLD FOIL TEXT & SHIMMER BUTTONS
+       ========================================================================= */
+    .text-gold-foil {
+      background: linear-gradient(135deg, #AA7C11 0%, #D4AF37 28%, #F6E2A1 52%, #D4AF37 76%, #AA7C11 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .btn-gold-shimmer {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #AA7C11 0%, #D4AF37 45%, #F6E2A1 55%, #C89B2B 100%);
+      color: #3A0712;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.55);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn-gold-shimmer::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 75%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+      transform: skewX(-22deg);
+      transition: left 0.65s ease;
+    }
+    .btn-gold-shimmer:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 26px rgba(212, 175, 55, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.7);
+    }
+    .btn-gold-shimmer:hover::after {
+      left: 140%;
+    }
+
+    /* =========================================================================
+       ORNATE BORDERS, ARCHES & MANDALA ROTATION
+       ========================================================================= */
+    .zari-double-border {
+      border: 1.5px solid rgba(212, 175, 55, 0.7);
+      box-shadow: inset 0 0 0 5px rgba(74, 10, 23, 0.85), inset 0 0 0 6.5px rgba(212, 175, 55, 0.4);
+    }
+
+    .zari-ivory-border {
+      border: 1.5px solid rgba(170, 124, 17, 0.6);
+      box-shadow: inset 0 0 0 5px rgba(253, 247, 235, 0.9), inset 0 0 0 6.5px rgba(212, 175, 55, 0.45);
+    }
+
+    .jharokha-card {
+      border-top-left-radius: 140px;
+      border-top-right-radius: 140px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    @keyframes slowSpin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .animate-mandala-slow {
+      animation: slowSpin 95s linear infinite;
+    }
+
+    @keyframes gentleFloat {
+      0%, 100% { transform: translateY(0); opacity: 0.8; }
+      50% { transform: translateY(6px); opacity: 1; }
+    }
+    .animate-float {
+      animation: gentleFloat 2.4s ease-in-out infinite;
+    }
+
+    /* Scroll reveal animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: opacity, transform;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Form input focus */
+    .royal-input:focus {
+      outline: none;
+      border-color: #D4AF37;
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.22);
+    }
+  </style>
+</head>
+<body class="selection:bg-goldFoil selection:text-royalMaroon">
+
+  <!-- =========================================================================
+       1. FIRST SCROLL / HERO SECTION (Deep Royal Maroon Silk + Jharokha Arch)
+       ========================================================================= -->
+  <header class="relative min-h-screen flex flex-col items-center justify-center bg-royal-brocade text-silkIvory px-4 sm:px-6 pt-16 pb-14 overflow-hidden">
+
+    <!-- Floating Golden Shimmer Particles Canvas -->
+    <canvas id="gold-particles" class="pointer-events-none absolute inset-0 w-full h-full z-0" aria-hidden="true"></canvas>
+
+    <!-- Slowly Rotating Translucent Gold Mandala Watermark -->
+    <div class="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden z-0" aria-hidden="true">
+      <svg class="w-[560px] h-[560px] sm:w-[760px] sm:h-[760px] text-goldFoil opacity-[0.09] animate-mandala-slow" viewBox="0 0 200 200" fill="none">
+        <circle cx="100" cy="100" r="92" stroke="currentColor" stroke-width="0.8" stroke-dasharray="3 3" />
+        <circle cx="100" cy="100" r="78" stroke="currentColor" stroke-width="1" />
+        <circle cx="100" cy="100" r="56" stroke="currentColor" stroke-width="0.9" />
+        <circle cx="100" cy="100" r="32" stroke="currentColor" stroke-width="0.8" />
+        <g stroke="currentColor" stroke-width="0.9">
+          <path d="M100 8 C110 32, 110 48, 100 72 C90 48, 90 32, 100 8 Z" />
+          <path d="M100 192 C110 168, 110 152, 100 128 C90 152, 90 168, 100 192 Z" />
+          <path d="M8 100 C32 90, 48 90, 72 100 C48 110, 32 110, 8 100 Z" />
+          <path d="M192 100 C168 90, 152 90, 128 100 C152 110, 168 110, 192 100 Z" />
+          <path d="M35 35 C56 46, 68 58, 80 80 C58 68, 46 56, 35 35 Z" />
+          <path d="M165 35 C144 46, 132 58, 120 80 C142 68, 154 56, 165 35 Z" />
+          <path d="M35 165 C56 154, 68 142, 80 120 C58 132, 46 144, 35 165 Z" />
+          <path d="M165 165 C144 154, 132 142, 120 120 C142 132, 154 144, 165 165 Z" />
+        </g>
+      </svg>
+    </div>
+
+    <!-- Top Festive Marigold & Lotus Toran / Garland Header Ornament -->
+    <div class="pointer-events-none absolute top-0 left-0 right-0 z-10 flex justify-center overflow-hidden" aria-hidden="true">
+      <svg class="w-full max-w-4xl h-16 sm:h-20" viewBox="0 0 900 90" fill="none" preserveAspectRatio="xMidYMin slice">
+        <!-- Gold Toran Rope Curves -->
+        <path d="M0 10 Q112 64 225 14 Q337 64 450 14 Q562 64 675 14 Q787 64 900 10" stroke="#D4AF37" stroke-width="2" />
+        <path d="M0 4 Q112 52 225 8 Q337 52 450 8 Q562 52 675 8 Q787 52 900 4" stroke="#F6E2A1" stroke-width="0.9" stroke-opacity="0.7" />
+        <!-- Marigold & Emerald Accents along the Toran -->
+        <g fill="#D9822B" stroke="#F6E2A1" stroke-width="0.8">
+          <circle cx="112" cy="40" r="7" />
+          <circle cx="337" cy="40" r="7" />
+          <circle cx="562" cy="40" r="7" />
+          <circle cx="787" cy="40" r="7" />
+        </g>
+        <g fill="#114B43" stroke="#D4AF37" stroke-width="0.8">
+          <circle cx="225" cy="16" r="5.5" />
+          <circle cx="450" cy="16" r="6.5" />
+          <circle cx="675" cy="16" r="5.5" />
+        </g>
+        <!-- Hanging Golden Bells / Tassels -->
+        <g stroke="#D4AF37" stroke-width="1.1">
+          <line x1="112" y1="47" x2="112" y2="64" />
+          <circle cx="112" cy="67" r="3" fill="#F6E2A1" />
+          <line x1="337" y1="47" x2="337" y2="64" />
+          <circle cx="337" cy="67" r="3" fill="#F6E2A1" />
+          <line x1="562" y1="47" x2="562" y2="64" />
+          <circle cx="562" cy="67" r="3" fill="#F6E2A1" />
+          <line x1="787" y1="47" x2="787" y2="64" />
+          <circle cx="787" cy="67" r="3" fill="#F6E2A1" />
+        </g>
+      </svg>
+    </div>
+
+    <!-- Main Ornate Mughal Jharokha Arched Hero Card -->
+    <div class="relative z-10 w-full max-w-2xl mx-auto mt-6">
+      <div class="relative bg-royalMaroon/80 backdrop-blur-[2px] zari-double-border jharokha-card px-5 sm:px-10 md:px-14 pt-12 sm:pt-14 pb-9 sm:pb-11 text-center shadow-2xl">
+
+        <!-- Bottom-Left & Bottom-Right Filigree Gold Corner Flourishes -->
+        <svg class="pointer-events-none absolute bottom-3 left-3 w-12 h-12 text-goldFoil/65" viewBox="0 0 60 60" fill="none" aria-hidden="true">
+          <path d="M6 54 V18 C6 18, 18 22, 24 36 C38 42, 42 54, 42 54 H6 Z" stroke="currentColor" stroke-width="1" />
+          <circle cx="15" cy="45" r="2.2" fill="currentColor" />
+        </svg>
+        <svg class="pointer-events-none absolute bottom-3 right-3 w-12 h-12 text-goldFoil/65 -scale-x-100" viewBox="0 0 60 60" fill="none" aria-hidden="true">
+          <path d="M6 54 V18 C6 18, 18 22, 24 36 C38 42, 42 54, 42 54 H6 Z" stroke="currentColor" stroke-width="1" />
+          <circle cx="15" cy="45" r="2.2" fill="currentColor" />
+        </svg>
+
+        <!-- Sacred Top Motif: Ornate Om + || श्री गणेशाय नमः || -->
+        <div class="reveal flex flex-col items-center mb-4">
+          <div class="w-12 h-12 rounded-full border border-goldFoil/70 bg-crimson/70 flex items-center justify-center shadow-md mb-2.5">
+            <span class="font-serif text-2xl sm:text-3xl text-goldLight leading-none select-none" aria-label="Auspicious Om">ॐ</span>
+          </div>
+          <p class="font-serif text-sm sm:text-base tracking-wider text-goldLight font-medium">
+            || श्री गणेशाय नमः ||
+          </p>
+          <p class="text-[10px] sm:text-[11px] uppercase tracking-royal text-parchment/80 mt-2">
+            Together with their families
+          </p>
+        </div>
+
+        <!-- Groom & Parents -->
+        <div class="reveal mt-4" style="transition-delay: 120ms;">
+          <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-gold-foil tracking-wide leading-tight">
+            Kaushal
+          </h1>
+          <p class="font-serif text-base sm:text-lg text-parchment/95 tracking-wide mt-1">
+            S/O Rajesh Kumar &amp; Anju Devi
+          </p>
+        </div>
+
+        <!-- Ornate Calligraphic Golden "&" with Lotus Flourish -->
+        <div class="reveal flex items-center justify-center gap-3 my-3 sm:my-4" style="transition-delay: 180ms;">
+          <span class="h-[1px] w-14 sm:w-20 bg-gradient-to-r from-transparent to-goldFoil"></span>
+          <span class="font-script text-4xl sm:text-5xl text-goldLight leading-none px-1">&amp;</span>
+          <span class="h-[1px] w-14 sm:w-20 bg-gradient-to-l from-transparent to-goldFoil"></span>
+        </div>
+
+        <!-- Bride & Parents -->
+        <div class="reveal" style="transition-delay: 240ms;">
+          <h2 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-gold-foil tracking-wide leading-tight">
+            Shalini
+          </h2>
+          <p class="font-serif text-base sm:text-lg text-parchment/95 tracking-wide mt-1">
+            D/O Abhay Pratap Keshri &amp; Poonam Keshri
+          </p>
+        </div>
+
+        <!-- Marriage Details Ribbon/Panel (Visible Right in First Scroll) -->
+        <div class="reveal mt-7 pt-5 pb-5 px-4 sm:px-6 rounded-2xl bg-crimson/70 border border-goldFoil/55 shadow-inner" style="transition-delay: 300ms;">
+          <p class="text-[10px] uppercase tracking-royal text-goldLight/90 font-medium mb-1.5">
+            Wedding Celebration
+          </p>
+          <p class="font-serif text-2xl sm:text-3xl text-silkIvory font-semibold tracking-wide">
+            25 January 2027
+          </p>
+          <p class="text-xs sm:text-sm text-parchment/90 tracking-wider uppercase mt-1 mb-4">
+            Umrao Banquet, Patna
+          </p>
+          <a
+            href="https://share.google/SCFGFXTWfXmzN3Itu"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-gold-shimmer inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full text-xs uppercase tracking-widecaps font-semibold"
+          >
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            View Location
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Downward "Scroll to Celebrate" Indicator -->
+    <a
+      href="#countdown"
+      class="relative z-10 mt-7 flex flex-col items-center gap-1.5 text-goldLight/85 hover:text-goldLight transition-colors p-2"
+      aria-label="Scroll to Celebrate"
+    >
+      <span class="text-[10px] uppercase tracking-royal font-medium">Scroll to Celebrate</span>
+      <svg class="w-4 h-4 text-goldFoil animate-float" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 5v14M5 12l7 7 7-7" />
+      </svg>
+    </a>
+  </header>
+
+  <main>
+    <!-- =======================================================================
+         2. LIVE COUNTDOWN SECTION (Warm Silk Ivory + Gold Zari Borders)
+         ======================================================================= -->
+    <section id="countdown" class="relative py-20 sm:py-28 px-4 sm:px-8 bg-ivory-parchment border-y-2 border-goldFoil/60 overflow-hidden">
+      <!-- Subtle Rotating Mandala Accent -->
+      <div class="pointer-events-none absolute -right-28 top-1/2 -translate-y-1/2 opacity-[0.07]" aria-hidden="true">
+        <svg class="w-[420px] h-[420px] text-goldAntique animate-mandala-slow" viewBox="0 0 200 200" fill="none">
+          <circle cx="100" cy="100" r="90" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4" />
+          <circle cx="100" cy="100" r="65" stroke="currentColor" stroke-width="1" />
+          <path d="M100 10 L114 55 L155 45 L125 82 L190 100 L125 118 L155 155 L114 145 L100 190 L86 145 L45 155 L75 118 L10 100 L75 82 L45 45 L86 55 Z" stroke="currentColor" stroke-width="0.9" />
+        </svg>
+      </div>
+
+      <div class="relative z-10 max-w-4xl mx-auto text-center">
+        <!-- Heading -->
+        <p class="reveal text-[11px] sm:text-xs uppercase tracking-royal text-goldAntique font-semibold mb-2">
+          With Immense Joy &amp; Love
+        </p>
+        <h2 class="reveal font-serif text-3xl sm:text-5xl text-royalMaroon font-bold uppercase tracking-wider mb-4">
+          Counting Down to the Auspicious Day
+        </h2>
+
+        <!-- Date Badge -->
+        <div class="reveal inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-royalMaroon text-goldLight text-xs uppercase tracking-widecaps font-medium shadow-sm mb-8">
+          <span>✦</span>
+          <span>25 January 2027 &bull; Patna</span>
+          <span>✦</span>
+        </div>
+
+        <!-- Ornate Indian Palace / Mandap Arch SVG Illustration -->
+        <div class="reveal max-w-sm mx-auto mb-10">
+          <svg viewBox="0 0 380 140" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto" aria-label="Royal Mandap Arch Illustration">
+            <line x1="20" y1="130" x2="360" y2="130" stroke="#AA7C11" stroke-width="1.4" />
+            <!-- Left & Right Chhatri Domes -->
+            <path d="M62 130 V92 M96 130 V92" stroke="#AA7C11" stroke-width="1.2" />
+            <path d="M56 92 H102" stroke="#AA7C11" stroke-width="1.2" />
+            <path d="M62 92 C62 74, 79 68, 79 60 C79 68, 96 74, 96 92" stroke="#6B0F22" stroke-width="1.3" fill="#F5E8D0" />
+            <circle cx="79" cy="56" r="2.2" fill="#D4AF37" />
+
+            <path d="M284 130 V92 M318 130 V92" stroke="#AA7C11" stroke-width="1.2" />
+            <path d="M278 92 H324" stroke="#AA7C11" stroke-width="1.2" />
+            <path d="M284 92 C284 74, 301 68, 301 60 C301 68, 318 74, 318 92" stroke="#6B0F22" stroke-width="1.3" fill="#F5E8D0" />
+            <circle cx="301" cy="56" r="2.2" fill="#D4AF37" />
+
+            <!-- Central Mandap Dome & Cusped Arch -->
+            <rect x="116" y="70" width="148" height="60" stroke="#AA7C11" stroke-width="1.3" fill="#FDF7EB" />
+            <path d="M148 70 C148 38, 190 28, 190 14 C190 28, 232 38, 232 70" stroke="#6B0F22" stroke-width="1.5" fill="#F5E8D0" />
+            <circle cx="190" cy="10" r="2.8" fill="#D4AF37" />
+            <path d="M156 130 V102 C156 92, 166 90, 172 84 C178 80, 184 76, 190 73 C196 76, 202 80, 208 84 C214 90, 224 92, 224 102 V130" stroke="#4A0A17" stroke-width="1.5" fill="#4A0A17" fill-opacity="0.08" />
+            <!-- Kalash symbol inside arch -->
+            <circle cx="190" cy="113" r="7" stroke="#D9822B" stroke-width="1.2" fill="#D4AF37" fill-opacity="0.25" />
+            <path d="M184 106 Q190 98 196 106" stroke="#114B43" stroke-width="1.2" />
+          </svg>
+        </div>
+
+        <!-- Live Countdown Medallions (4 Ornate Gold-Framed Royal Maroon Boxes) -->
+        <div class="reveal grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-2xl mx-auto mb-12">
+          <div class="bg-royalMaroon zari-double-border rounded-2xl py-6 px-3 shadow-lg">
+            <div id="cd-days" class="font-display text-3xl sm:text-5xl text-gold-foil font-bold leading-none">--</div>
+            <div class="text-[10px] sm:text-[11px] uppercase tracking-royal text-parchment/85 mt-2.5">Days</div>
+          </div>
+          <div class="bg-royalMaroon zari-double-border rounded-2xl py-6 px-3 shadow-lg">
+            <div id="cd-hours" class="font-display text-3xl sm:text-5xl text-gold-foil font-bold leading-none">--</div>
+            <div class="text-[10px] sm:text-[11px] uppercase tracking-royal text-parchment/85 mt-2.5">Hours</div>
+          </div>
+          <div class="bg-royalMaroon zari-double-border rounded-2xl py-6 px-3 shadow-lg">
+            <div id="cd-minutes" class="font-display text-3xl sm:text-5xl text-gold-foil font-bold leading-none">--</div>
+            <div class="text-[10px] sm:text-[11px] uppercase tracking-royal text-parchment/85 mt-2.5">Minutes</div>
+          </div>
+          <div class="bg-royalMaroon zari-double-border rounded-2xl py-6 px-3 shadow-lg">
+            <div id="cd-seconds" class="font-display text-3xl sm:text-5xl text-gold-foil font-bold leading-none">--</div>
+            <div class="text-[10px] sm:text-[11px] uppercase tracking-royal text-parchment/85 mt-2.5">Seconds</div>
+          </div>
+        </div>
+        <p id="cd-status" class="hidden font-serif italic text-2xl text-royalMaroon font-semibold mb-8"></p>
+
+        <!-- Venue Summary Card -->
+        <div class="reveal max-w-xl mx-auto bg-silkIvory zari-ivory-border rounded-2xl p-7 sm:p-9 shadow-md">
+          <p class="text-[10px] uppercase tracking-royal text-goldAntique font-semibold mb-1.5">Royal Venue</p>
+          <h3 class="font-serif text-3xl sm:text-4xl text-royalMaroon font-bold mb-2">
+            Umrao Banquet, Patna
+          </h3>
+          <p class="text-xs sm:text-sm text-inkDeep/75 mb-6">
+            We eagerly await to welcome you with warmth, blessings, and royal hospitality.
+          </p>
+          <a
+            href="https://share.google/SCFGFXTWfXmzN3Itu"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-gold-shimmer inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full text-xs uppercase tracking-widecaps font-semibold"
+          >
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            Open in Google Maps
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         3. THE FESTIVITIES SECTION ("Save the Dates") — STRICTLY 2 EVENT CARDS
+         ======================================================================= -->
+    <section id="festivities" class="relative py-20 sm:py-28 px-4 sm:px-8 bg-royal-brocade text-silkIvory overflow-hidden">
+      <div class="relative z-10 max-w-5xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-14">
+          <p class="reveal text-[11px] sm:text-xs uppercase tracking-royal text-goldLight font-medium mb-2">
+            The Festivities
+          </p>
+          <h2 class="reveal font-display text-3xl sm:text-5xl text-gold-foil font-bold tracking-wide">
+            Save the Dates
+          </h2>
+
+          <!-- Ornate Gold Lotus Divider -->
+          <div class="reveal flex items-center justify-center gap-3 mt-6 max-w-xs mx-auto" aria-hidden="true">
+            <span class="h-[1px] flex-1 bg-gradient-to-r from-transparent to-goldFoil"></span>
+            <svg class="w-8 h-6 text-goldFoil" viewBox="0 0 40 28" fill="none">
+              <path d="M20 4 C24 12, 24 18, 20 24 C16 18, 16 12, 20 4 Z" stroke="currentColor" stroke-width="1.3" fill="currentColor" fill-opacity="0.25" />
+              <path d="M20 24 C12 20, 8 14, 10 9 C14 13, 17 17, 20 24 Z" stroke="currentColor" stroke-width="1.2" />
+              <path d="M20 24 C28 20, 32 14, 30 9 C26 13, 23 17, 20 24 Z" stroke="currentColor" stroke-width="1.2" />
+            </svg>
+            <span class="h-[1px] flex-1 bg-gradient-to-l from-transparent to-goldFoil"></span>
+          </div>
+        </div>
+
+        <!-- Two Ornate Arched Royal Invitation Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 max-w-4xl mx-auto">
+
+          <!-- EVENT CARD 1: Engagement & Sangeet Day -->
+          <article class="reveal bg-ivory-parchment text-inkDeep zari-ivory-border jharokha-card px-6 sm:px-9 pt-12 pb-9 text-center shadow-2xl flex flex-col justify-between">
+            <div>
+              <!-- Custom Inline SVG: Ornate Rings & Sangeet Motif -->
+              <div class="w-16 h-16 mx-auto mb-5 rounded-full bg-royalMaroon/10 border border-goldFoil/70 flex items-center justify-center">
+                <svg class="w-9 h-9 text-royalMaroon" viewBox="0 0 48 48" fill="none">
+                  <circle cx="19" cy="27" r="9.5" stroke="#AA7C11" stroke-width="2" />
+                  <circle cx="29" cy="27" r="9.5" stroke="#6B0F22" stroke-width="2" />
+                  <path d="M19 13 L22 17 L19 19 L16 17 Z" fill="#D4AF37" stroke="#AA7C11" stroke-width="1" />
+                  <path d="M24 7 L25.2 10 L28 11 L25.2 12 L24 15 L22.8 12 L20 11 L22.8 10 Z" fill="#D9822B" />
+                </svg>
+              </div>
+
+              <p class="text-[10px] uppercase tracking-royal text-goldAntique font-semibold mb-2">
+                Celebration I
+              </p>
+              <h3 class="font-serif text-3xl sm:text-4xl text-royalMaroon font-bold leading-snug mb-3">
+                Engagement &amp; Sangeet Day
+              </h3>
+
+              <div class="inline-block px-4 py-1.5 rounded-full bg-royalMaroon text-goldLight text-xs uppercase tracking-widecaps font-medium mb-4">
+                22 Jan 2027
+              </div>
+
+              <p class="font-serif text-xl text-inkDeep/90 font-semibold mb-7">
+                Umrao Banquet, Patna
+              </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4 border-t border-goldFoil/35">
+              <button
+                type="button"
+                onclick="downloadEventICS('engagement')"
+                class="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-royalMaroon hover:bg-crimson text-goldLight transition-colors text-[11px] uppercase tracking-widecaps font-medium"
+              >
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+                Add to Calendar
+              </button>
+              <a
+                href="https://share.google/SCFGFXTWfXmzN3Itu"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full border border-royalMaroon text-royalMaroon hover:bg-royalMaroon hover:text-goldLight transition-colors text-[11px] uppercase tracking-widecaps font-semibold"
+              >
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Venue Map
+              </a>
+            </div>
+          </article>
+
+          <!-- EVENT CARD 2: Wedding Day -->
+          <article class="reveal bg-ivory-parchment text-inkDeep zari-ivory-border jharokha-card px-6 sm:px-9 pt-12 pb-9 text-center shadow-2xl flex flex-col justify-between" style="transition-delay: 140ms;">
+            <div>
+              <!-- Custom Inline SVG: Sacred Kalash & Lotus Motif -->
+              <div class="w-16 h-16 mx-auto mb-5 rounded-full bg-royalMaroon/10 border border-goldFoil/70 flex items-center justify-center">
+                <svg class="w-9 h-9" viewBox="0 0 48 48" fill="none">
+                  <!-- Mango leaves -->
+                  <path d="M24 20 C19 14, 15 13, 13 15 C16 18, 19 20, 24 20 Z" fill="#114B43" />
+                  <path d="M24 20 C29 14, 33 13, 35 15 C32 18, 29 20, 24 20 Z" fill="#114B43" />
+                  <!-- Coconut -->
+                  <circle cx="24" cy="17" r="4.5" fill="#D9822B" stroke="#6B0F22" stroke-width="1.3" />
+                  <!-- Kalash Pot -->
+                  <path d="M18 22 H30 L28.5 25 C32.5 27.5, 33.5 34.5, 29 38.5 H19 C14.5 34.5, 15.5 27.5, 19.5 25 L18 22 Z" fill="#D4AF37" fill-opacity="0.3" stroke="#6B0F22" stroke-width="1.8" />
+                  <circle cx="24" cy="31.5" r="2" fill="#6B0F22" />
+                </svg>
+              </div>
+
+              <p class="text-[10px] uppercase tracking-royal text-goldAntique font-semibold mb-2">
+                Celebration II
+              </p>
+              <h3 class="font-serif text-3xl sm:text-4xl text-royalMaroon font-bold leading-snug mb-3">
+                Wedding Day
+              </h3>
+
+              <div class="inline-block px-4 py-1.5 rounded-full bg-royalMaroon text-goldLight text-xs uppercase tracking-widecaps font-medium mb-4">
+                25 Jan 2027
+              </div>
+
+              <p class="font-serif text-xl text-inkDeep/90 font-semibold mb-7">
+                Umrao Banquet, Patna
+              </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-4 border-t border-goldFoil/35">
+              <button
+                type="button"
+                onclick="downloadEventICS('wedding')"
+                class="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-royalMaroon hover:bg-crimson text-goldLight transition-colors text-[11px] uppercase tracking-widecaps font-medium"
+              >
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                  <line x1="16" y1="2" x2="16" y2="6" />
+                  <line x1="8" y1="2" x2="8" y2="6" />
+                  <line x1="3" y1="10" x2="21" y2="10" />
+                </svg>
+                Add to Calendar
+              </button>
+              <a
+                href="https://share.google/SCFGFXTWfXmzN3Itu"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full border border-royalMaroon text-royalMaroon hover:bg-royalMaroon hover:text-goldLight transition-colors text-[11px] uppercase tracking-widecaps font-semibold"
+              >
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Venue Map
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         4. CONFIRM YOUR PRESENCE / RSVP SECTION (STRICTLY 3 FIELDS, NO FAMILY CONTACTS)
+         ======================================================================= -->
+    <section id="rsvp" class="relative py-20 sm:py-28 px-4 sm:px-8 bg-ivory-parchment border-t-2 border-goldFoil/60">
+      <div class="max-w-2xl mx-auto">
+        <div class="reveal bg-silkIvory zari-ivory-border rounded-3xl p-7 sm:p-11 md:p-12 shadow-xl">
+
+          <!-- Header -->
+          <div class="text-center mb-9">
+            <div class="flex items-center justify-center gap-3 mb-3" aria-hidden="true">
+              <span class="h-[1px] w-10 bg-goldFoil"></span>
+              <span class="text-goldAntique text-base">✦</span>
+              <span class="h-[1px] w-10 bg-goldFoil"></span>
+            </div>
+            <h2 class="font-serif text-3xl sm:text-5xl text-royalMaroon font-bold uppercase tracking-wider mb-3">
+              Confirm Your Presence
+            </h2>
+            <p class="text-xs sm:text-sm text-inkDeep/80 max-w-md mx-auto leading-relaxed">
+              We would be honoured to have you bless the couple and join the celebrations.
+            </p>
+          </div>
+
+          <!-- Inline Validation Error Banner -->
+          <div id="rsvp-error" class="hidden mb-6 p-3.5 rounded-xl bg-royalMaroon/10 border border-royalMaroon/35 text-royalMaroon text-xs sm:text-sm text-center font-medium"></div>
+
+          <!-- RSVP Form: STRICTLY Name, Members Attending, Contact Number -->
+          <form id="rsvp-form" novalidate class="space-y-6">
+            <div>
+              <label for="guest-name" class="block text-[11px] uppercase tracking-widecaps text-royalMaroon font-semibold mb-2">
+                Name <span class="text-crimson">*</span>
+              </label>
+              <input
+                type="text"
+                id="guest-name"
+                name="name"
+                required
+                placeholder="Enter your full name"
+                class="royal-input w-full bg-white/80 border border-goldFoil/60 rounded-xl px-4 py-3.5 text-sm text-inkDeep placeholder:text-inkDeep/40"
+              />
+            </div>
+
+            <div>
+              <label for="guest-members" class="block text-[11px] uppercase tracking-widecaps text-royalMaroon font-semibold mb-2">
+                Members Attending <span class="text-crimson">*</span>
+              </label>
+              <input
+                type="number"
+                id="guest-members"
+                name="members"
+                min="1"
+                max="20"
+                required
+                placeholder="Number of guests (e.g. 2)"
+                class="royal-input w-full bg-white/80 border border-goldFoil/60 rounded-xl px-4 py-3.5 text-sm text-inkDeep placeholder:text-inkDeep/40"
+              />
+            </div>
+
+            <div>
+              <label for="guest-phone" class="block text-[11px] uppercase tracking-widecaps text-royalMaroon font-semibold mb-2">
+                Contact Number <span class="text-crimson">*</span>
+              </label>
+              <input
+                type="tel"
+                id="guest-phone"
+                name="contact_number"
+                required
+                placeholder="+91 98XXX XXXXX"
+                class="royal-input w-full bg-white/80 border border-goldFoil/60 rounded-xl px-4 py-3.5 text-sm text-inkDeep placeholder:text-inkDeep/40"
+              />
+            </div>
+
+            <div class="pt-3 text-center">
+              <button
+                type="submit"
+                id="rsvp-submit-btn"
+                class="btn-gold-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-4 rounded-full text-xs uppercase tracking-royal font-semibold disabled:opacity-60 disabled:cursor-not-allowed"
+              >
+                <span id="rsvp-btn-text">Confirm Presence</span>
+                <svg id="rsvp-spinner" class="hidden w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3"></circle>
+                  <path class="opacity-80" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                </svg>
+              </button>
+            </div>
+          </form>
+
+          <!-- Ornate Thank You Confirmation State -->
+          <div id="rsvp-thank-you" class="hidden text-center py-4 space-y-5">
+            <div class="w-14 h-14 mx-auto rounded-full bg-royalMaroon text-goldLight flex items-center justify-center text-2xl shadow-md">
+              ✦
+            </div>
+            <h3 class="font-serif text-3xl sm:text-4xl text-royalMaroon font-bold">
+              Thank You
+            </h3>
+            <div id="rsvp-summary" class="inline-block bg-parchment border border-goldFoil/60 rounded-xl px-6 py-3 text-sm text-royalMaroon font-medium"></div>
+            <p class="text-sm sm:text-base text-inkDeep/85 max-w-md mx-auto leading-relaxed">
+              Your presence means the world to us. We look forward to welcoming you at Umrao Banquet, Patna.
+            </p>
+            <div class="pt-3">
+              <button
+                type="button"
+                id="rsvp-reset-btn"
+                class="px-7 py-3 rounded-full border border-royalMaroon text-royalMaroon hover:bg-royalMaroon hover:text-goldLight transition-colors text-xs uppercase tracking-widecaps font-semibold"
+              >
+                Submit Another Response
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       5. CLOSING / FOOTER SECTION (Deep Royal Maroon Velvet + Gold Lotus Art)
+       ========================================================================= -->
+  <footer class="relative py-20 sm:py-24 px-4 sm:px-8 bg-royal-brocade text-silkIvory text-center overflow-hidden border-t-2 border-goldFoil/70">
+    <!-- Subtle Mandala Watermark -->
+    <div class="pointer-events-none absolute inset-0 flex items-center justify-center opacity-[0.07]" aria-hidden="true">
+      <svg class="w-80 h-80 text-goldFoil" viewBox="0 0 200 200" fill="none">
+        <circle cx="100" cy="100" r="88" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" />
+        <circle cx="100" cy="100" r="62" stroke="currentColor" stroke-width="1" />
+      </svg>
+    </div>
+
+    <div class="relative z-10 max-w-xl mx-auto">
+      <!-- Ornate Flourish Motif -->
+      <div class="reveal flex items-center justify-center gap-3 mb-5" aria-hidden="true">
+        <span class="h-[1px] w-14 bg-gradient-to-r from-transparent to-goldFoil"></span>
+        <svg class="w-9 h-7 text-goldFoil" viewBox="0 0 40 28" fill="none">
+          <path d="M20 4 C24 12, 24 18, 20 24 C16 18, 16 12, 20 4 Z" stroke="currentColor" stroke-width="1.3" fill="currentColor" fill-opacity="0.3" />
+          <path d="M20 24 C12 20, 8 14, 10 9 C14 13, 17 17, 20 24 Z" stroke="currentColor" stroke-width="1.2" />
+          <path d="M20 24 C28 20, 32 14, 30 9 C26 13, 23 17, 20 24 Z" stroke="currentColor" stroke-width="1.2" />
+        </svg>
+        <span class="h-[1px] w-14 bg-gradient-to-l from-transparent to-goldFoil"></span>
+      </div>
+
+      <p class="reveal font-script text-3xl sm:text-4xl text-goldLight mb-1">
+        With love,
+      </p>
+      <h2 class="reveal font-display text-3xl sm:text-5xl text-gold-foil font-bold tracking-wide mb-3">
+        Kaushal &amp; Shalini
+      </h2>
+      <p class="reveal font-serif text-lg sm:text-xl text-parchment/95 tracking-wide mb-2">
+        25 January 2027 &bull; Umrao Banquet, Patna
+      </p>
+      <p class="reveal text-xs uppercase tracking-royal text-goldLight/80 mt-4">
+        We cannot wait to celebrate with you
+      </p>
+    </div>
+
+    <!-- Ornate Gold Bottom Edge Border -->
+    <div class="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-goldAntique via-goldLight to-goldAntique"></div>
+  </footer>
+
+  <!-- =========================================================================
+       JAVASCRIPT: PARTICLES, COUNTDOWN, .ICS CALENDAR, & RSVP FORM
+       ========================================================================= -->
+  <script>
+    /**
+     * =========================================================================
+     * CONFIGURATION
+     * =========================================================================
+     */
+
+    // Countdown target: 25 January 2027 at 7:00 PM IST
+    const WEDDING_TARGET_ISO = '2027-01-25T19:00:00+05:30';
+
+    // Optional: Plug in your Formspree or Google Apps Script Web App URL below
+    // to save RSVP responses directly to Google Sheets or Email.
+    // Leave empty ('') for instant client-side confirmation.
+    const RSVP_ENDPOINT_URL = '';
+
+    // Calendar (.ics) Event Definitions (IST is UTC+5:30)
+    const CALENDAR_EVENTS = {
+      engagement: {
+        filename: 'Kaushal_Shalini_Engagement_Sangeet.ics',
+        summary: 'Engagement & Sangeet Day — Kaushal & Shalini',
+        location: 'Umrao Banquet, Patna (https://share.google/SCFGFXTWfXmzN3Itu)',
+        description: 'Join us for the Engagement & Sangeet celebration of Kaushal & Shalini at Umrao Banquet, Patna.',
+        startUTC: '20270122T123000Z', // 22 Jan 2027, 6:00 PM IST
+        endUTC: '20270122T173000Z'    // 22 Jan 2027, 11:00 PM IST
+      },
+      wedding: {
+        filename: 'Kaushal_Shalini_Wedding_Day.ics',
+        summary: 'Wedding Day — Kaushal & Shalini',
+        location: 'Umrao Banquet, Patna (https://share.google/SCFGFXTWfXmzN3Itu)',
+        description: 'Wedding celebration of Kaushal (S/O Rajesh Kumar & Anju Devi) & Shalini (D/O Abhay Pratap Keshri & Poonam Keshri) at Umrao Banquet, Patna.',
+        startUTC: '20270125T133000Z', // 25 Jan 2027, 7:00 PM IST
+        endUTC: '20270125T183000Z'    // 25 Jan 2027, 12:00 AM IST
+      }
+    };
+
+    /**
+     * =========================================================================
+     * 1. FLOATING GOLDEN SHIMMER PARTICLES (LIGHTWEIGHT CANVAS)
+     * =========================================================================
+     */
+    function initGoldParticles() {
+      const canvas = document.getElementById('gold-particles');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let particles = [];
+      let animFrameId;
+
+      function resizeCanvas() {
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+        const count = Math.min(36, Math.floor((canvas.width * canvas.height) / 28000));
+        particles = Array.from({ length: count }, () => ({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          r: Math.random() * 2 + 0.8,
+          vy: -(Math.random() * 0.35 + 0.15),
+          vx: (Math.random() - 0.5) * 0.25,
+          alpha: Math.random() * 0.55 + 0.2,
+          phase: Math.random() * Math.PI * 2
+        }));
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach((p) => {
+          p.y += p.vy;
+          p.x += p.vx;
+          p.phase += 0.02;
+
+          if (p.y < -10) {
+            p.y = canvas.height + 10;
+            p.x = Math.random() * canvas.width;
+          }
+          if (p.x < -10) p.x = canvas.width + 10;
+          if (p.x > canvas.width + 10) p.x = -10;
+
+          const twinkle = p.alpha * (0.65 + 0.35 * Math.sin(p.phase));
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(246, 226, 161, ${twinkle.toFixed(2)})`;
+          ctx.fill();
+        });
+        animFrameId = requestAnimationFrame(draw);
+      }
+
+      resizeCanvas();
+      draw();
+      window.addEventListener('resize', () => {
+        cancelAnimationFrame(animFrameId);
+        resizeCanvas();
+        draw();
+      });
+    }
+
+    /**
+     * =========================================================================
+     * 2. INTERSECTION OBSERVER SCROLL REVEAL
+     * =========================================================================
+     */
+    function initScrollReveal() {
+      const els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach((el) => el.classList.add('visible'));
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: '0px 0px -24px 0px' }
+      );
+
+      els.forEach((el) => observer.observe(el));
+    }
+
+    /**
+     * =========================================================================
+     * 3. LIVE COUNTDOWN TIMER
+     * =========================================================================
+     */
+    function initCountdown() {
+      const target = new Date(WEDDING_TARGET_ISO).getTime();
+      const dEl = document.getElementById('cd-days');
+      const hEl = document.getElementById('cd-hours');
+      const mEl = document.getElementById('cd-minutes');
+      const sEl = document.getElementById('cd-seconds');
+      const statusEl = document.getElementById('cd-status');
+
+      function tick() {
+        const diff = target - Date.now();
+        if (diff <= 0) {
+          dEl.textContent = '00';
+          hEl.textContent = '00';
+          mEl.textContent = '00';
+          sEl.textContent = '00';
+          statusEl.textContent = 'The auspicious wedding celebrations have begun!';
+          statusEl.classList.remove('hidden');
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const mins = Math.floor((diff / (1000 * 60)) % 60);
+        const secs = Math.floor((diff / 1000) % 60);
+
+        dEl.textContent = String(days).padStart(2, '0');
+        hEl.textContent = String(hours).padStart(2, '0');
+        mEl.textContent = String(mins).padStart(2, '0');
+        sEl.textContent = String(secs).padStart(2, '0');
+      }
+
+      tick();
+      setInterval(tick, 1000);
+    }
+
+    /**
+     * =========================================================================
+     * 4. .ICS CALENDAR FILE DOWNLOAD GENERATOR
+     * =========================================================================
+     */
+    function downloadEventICS(eventKey) {
+      const ev = CALENDAR_EVENTS[eventKey];
+      if (!ev) return;
+
+      try {
+        const nowStamp = new Date().toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+        const icsContent = [
+          'BEGIN:VCALENDAR',
+          'VERSION:2.0',
+          'PRODID:-//Kaushal & Shalini Wedding//Invitation//EN',
+          'CALSCALE:GREGORIAN',
+          'METHOD:PUBLISH',
+          'BEGIN:VEVENT',
+          `UID:${eventKey}-${Date.now()}@kaushalshalini.wedding`,
+          `DTSTAMP:${nowStamp}`,
+          `DTSTART:${ev.startUTC}`,
+          `DTEND:${ev.endUTC}`,
+          `SUMMARY:${ev.summary}`,
+          `LOCATION:${ev.location}`,
+          `DESCRIPTION:${ev.description}`,
+          'END:VEVENT',
+          'END:VCALENDAR'
+        ].join('\r\n');
+
+        const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = ev.filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+      } catch (err) {
+        console.error('Calendar download error:', err);
+      }
+    }
+
+    /**
+     * =========================================================================
+     * 5. RSVP FORM VALIDATION & SUBMISSION
+     * =========================================================================
+     */
+    function escapeHtml(str) {
+      const div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    function initRsvpForm() {
+      const form = document.getElementById('rsvp-form');
+      const errorEl = document.getElementById('rsvp-error');
+      const submitBtn = document.getElementById('rsvp-submit-btn');
+      const btnText = document.getElementById('rsvp-btn-text');
+      const spinner = document.getElementById('rsvp-spinner');
+      const thankYouEl = document.getElementById('rsvp-thank-you');
+      const summaryEl = document.getElementById('rsvp-summary');
+      const resetBtn = document.getElementById('rsvp-reset-btn');
+
+      function showError(msg) {
+        errorEl.textContent = msg;
+        errorEl.classList.remove('hidden');
+      }
+
+      function clearError() {
+        errorEl.textContent = '';
+        errorEl.classList.add('hidden');
+      }
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        clearError();
+
+        const name = document.getElementById('guest-name').value.trim();
+        const members = document.getElementById('guest-members').value.trim();
+        const phone = document.getElementById('guest-phone').value.trim();
+
+        if (!name) {
+          showError('Please enter your name.');
+          document.getElementById('guest-name').focus();
+          return;
+        }
+        if (!members || Number(members) < 1 || Number(members) > 20) {
+          showError('Please enter the number of members attending (1–20).');
+          document.getElementById('guest-members').focus();
+          return;
+        }
+        const digitsOnly = phone.replace(/\D/g, '');
+        if (digitsOnly.length < 10) {
+          showError('Please enter a valid 10-digit contact number.');
+          document.getElementById('guest-phone').focus();
+          return;
+        }
+
+        submitBtn.disabled = true;
+        btnText.textContent = 'Confirming...';
+        spinner.classList.remove('hidden');
+
+        try {
+          if (RSVP_ENDPOINT_URL) {
+            const response = await fetch(RSVP_ENDPOINT_URL, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json'
+              },
+              body: JSON.stringify({ name, members, contact_number: phone })
+            });
+            if (!response.ok) {
+              throw new Error('Could not submit your response. Please try again.');
+            }
+          } else {
+            await new Promise((resolve) => setTimeout(resolve, 550));
+          }
+
+          const guestLabel = Number(members) === 1 ? 'Guest' : 'Guests';
+          summaryEl.innerHTML = `${escapeHtml(name)} &nbsp;✦&nbsp; ${escapeHtml(members)} ${guestLabel} Attending`;
+
+          form.classList.add('hidden');
+          thankYouEl.classList.remove('hidden');
+        } catch (err) {
+          showError(err.message || 'Something went wrong. Please try again.');
+        } finally {
+          submitBtn.disabled = false;
+          btnText.textContent = 'Confirm Presence';
+          spinner.classList.add('hidden');
+        }
+      });
+
+      resetBtn.addEventListener('click', () => {
+        form.reset();
+        clearError();
+        thankYouEl.classList.add('hidden');
+        form.classList.remove('hidden');
+      });
+    }
+
+    // Boot up all interactive features
+    document.addEventListener('DOMContentLoaded', () => {
+      initGoldParticles();
+      initScrollReveal();
+      initCountdown();
+      initRsvpForm();
+    });
+  </script>
+</body>
+</html>
